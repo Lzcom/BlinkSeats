@@ -1,0 +1,7 @@
+{
+  "name": "BlinkSeats",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
