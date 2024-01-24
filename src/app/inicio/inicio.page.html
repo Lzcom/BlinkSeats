@@ -1,0 +1,31 @@
+<ion-app>
+    <ion-menu contentId="main-content">
+        <ion-header>
+            <ion-toolbar color="tertiary">
+                <img class="logo-menu" src="./assets/images/imagen_2024-01-23_204621634-removebg-preview.png">
+            </ion-toolbar>
+        </ion-header>
+        <ion-content class="ion-padding">Se colocaran categorias</ion-content>
+    </ion-menu>
+    <div class="ion-page" id="main-content">
+        <ion-header>
+            <ion-toolbar>
+                <ion-buttons slot="start">
+                    <ion-menu-button></ion-menu-button>
+                </ion-buttons>
+                <img class="logo" src="./assets/images/imagen_2024-01-23_204621634-removebg-preview.png">
+            </ion-toolbar>
+        </ion-header>
+        <ion-content>
+        <div>
+            <swiper-container [loop]="true" pagination="true" pagination-clickable="true" space-between="30"
+    autoplay-delay="2500" autoplay-disable-on-interaction="false" pagination-dynamic-bullets="true">
+                <swiper-slide *ngFor="let slide of slides; let i = index">
+                    <img src="{{slide.image}}">
+                </swiper-slide>
+            </swiper-container>
+        </div>
+        </ion-content>
+    </div>
+
+</ion-app>

@@ -1,20 +1,16 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <swiper-container
+  [loop]="true" 
+  pagination="true" pagination-dynamic-bullets="true" 
+  >
+    <swiper-slide *ngFor= "let slide of slides; let i = index" [style.background-color] = "slide.color" >
+      <h1 class="{{slide.class}}"><b>{{slide.title}}</b></h1>
+      <img src="{{slide.image}}">
+      <p class={{slide.class}} [innerHTML]="slide.description"></p>
+      <ion-button shape="round" (click)="goToInicio()">¡Disfrutar!</ion-button>
+    </swiper-slide>
+  </swiper-container>
 </ion-content>
+
+
