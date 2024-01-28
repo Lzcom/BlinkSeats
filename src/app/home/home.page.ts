@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavController } from '@ionic/angular';
 import { IonButton } from '@ionic/angular';
 
 @Component({
@@ -11,7 +11,7 @@ export class HomePage {
   slides = [
     {
       title: "BIENVENIDO A",
-      image: "../../assets/images/descargar.png",
+      image: "../../assets/icon/descargar.png",
       description: "Boletos en segundos, diversión en minutos.",
       class: "slide-1",
       color: '#22004c',
@@ -43,11 +43,11 @@ export class HomePage {
     }
   ]
 
-  constructor(private router:Router) {}
+  constructor(private navCtrl: NavController,) {}
 
   goToInicio(){
-    console.log("go to intro");
-    this.router.navigateByUrl('/inicio');
+    console.log("go to login");
+    this.navCtrl.navigateForward('/login');
   }
 
 }
