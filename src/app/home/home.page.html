@@ -8,7 +8,7 @@
       <h1 class="{{slide.class}}"><b>{{slide.title}}</b></h1>
       <img src="{{slide.image}}">
       <p class={{slide.class}} [innerHTML]="slide.description"></p>
-      <ion-button shape="round" (click)="goToInicio()">¡Disfrutar!</ion-button>
+      <ion-button *ngIf="i === 3" shape="round" (click)="goToInicio()">¡Disfrutar!</ion-button> <!--Para que salga el boton en un solo slide-->
     </swiper-slide>
   </swiper-container>
 </ion-content>

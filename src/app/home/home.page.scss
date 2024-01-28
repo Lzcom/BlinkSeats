@@ -16,16 +16,17 @@
 #container p {
   font-size: 16px;
   line-height: 22px;
-  color: #8c8c8c;
-  margin: 0;
+  font-weight: bold;
+  font-family: system-ui;
 }
 
 #container a {
   text-decoration: none;
 }
 
-.title{
-  color: #edf2f4;
+.tittle{
+  font-family: system-ui;
+  font-size: larger;
 }
 
 swiper-container {
@@ -43,20 +44,30 @@ swiper-slide {
 }
 swiper-slide img{
   display: block;
-  width: 45%;
-  height: 40%;
+  width: 65%;
   object-fit:contain;
 }
 
 .slide-1 {
-  color:#edf2f4;
-  font-style: italic;
+  color:#ffe34f;
+  font-size: large;
+  padding: 17px;
+
 }
 .slide-2 {
- color: #2b2d42;
- font-style: italic;
+  color: #2b2d44;
+  font-size: large;
+  padding: 17px;
+ 
 }
 .slide-3 {
-  color: #edf2f4;
-  font-style: italic;
+  color:#ffe34f;
+  font-size: large;
+  padding: 17px;
+}
+.slide-4 {
+  color: #2b2d44;
+  font-size: large;
+  padding: 17px;
+ 
 }
