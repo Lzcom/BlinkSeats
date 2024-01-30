@@ -1,6 +1,5 @@
 ion-content{
     --background: #23014e;
-    
 }
 figure{
     padding-top: 55px;
@@ -52,4 +51,15 @@ ion-button{
     --background: #fbae00;
     font-size: bold;
     box-shadow: 1px 8px 8px 0px rgba(0,0,0,0.5);
+}
+.validation_messages {
+    color: #a2b3d1;
+    font-size: 12px;
+    margin-top: 5px;
+}
+.validation_mes {
+    color: #a2b3d1;
+    font-size: 15px;
+    margin-top: 5px;
+    text-align: center;
 }

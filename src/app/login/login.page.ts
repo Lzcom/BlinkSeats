@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder,FormGroup,FormControl, Validators } from '@angular/forms';
 import { NavController } from '@ionic/angular';
+import { AuthService } from '../services/auth.service';
+import { Router } from '@angular/router';
+import { Storage } from '@ionic/storage-angular';
 
 @Component({
   selector: 'app-login',
@@ -9,7 +12,21 @@ import { NavController } from '@ionic/angular';
 })
 export class LoginPage implements OnInit {
 loginForm: FormGroup;
-  constructor(private formBuilder:FormBuilder) {
+validation_messages={
+  email: [
+    {type: "required", message: "Email es requerido"},
+    {type: "pattern", message: "Email no es valido"}
+  ],
+  password: [
+    {type: "required", message: "Contraseña es requerida"},
+    //{type: "pattern", message: "Contraseña no es valida"}
+  ]
+}
+  loginMessage: any;
+  constructor(private formBuilder:FormBuilder,
+    private authService: AuthService,
+    private router: Router,
+    private storage: Storage) {
     this.loginForm = this.formBuilder.group({
       email: new FormControl(
         "",
@@ -33,6 +50,13 @@ loginForm: FormGroup;
   }
 login(login_data: any){
   console.log(login_data);
+  this.authService.loginUser(login_data).then(res => {
+  this.loginMessage = res;
+  this.storage.set('userLoggedIn',true);
+  this.router.navigateByUrl('/inicio');
+  }).catch(err => {
+    this.loginMessage = err;
+  })
 }
 
 }

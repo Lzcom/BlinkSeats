@@ -6,16 +6,28 @@
     <p class="Login"><b>LOG IN</b></p>
 
     <form [formGroup]="loginForm" (ngSubmit)="login(loginForm.value)">
-      <!--Esto es el item del correo. Donde colocamos la validacion creada llamando el motodo con formControlName-->
+      
       <ion-input labelPlacement="stacked" label="Email" placeholder="email@domain.com"
         formControlName="email"></ion-input>
+
+        <div class="validation_messages">
+          <ng-container *ngFor="let validation of validation_messages.email"> 
+            <div *ngIf="
+          (loginForm.get('email')?.hasError(validation.type) &&
+          loginForm.get('email')?.dirty)" class="validation_messages">
+              {{validation.message}}</div>
+          </ng-container>
+        </div>
+
       <ion-input type="password" label="Password" placeholder="Password" labelPlacement="stacked"
         formControlName="password"></ion-input>
       <ion-button type="submit" [disabled]="!loginForm.valid" shape="round"
         expand="full">login</ion-button>
     </form>
-
-    <p>¿Aun no tienes cuenta?&nbsp;<a HREF="otra_pagina.html"> Crear una cuenta</a></p>
+    <div class="validation_mes">
+      <b>{{loginMessage}}</b>
+    </div>
+    <p>¿Aun no tienes cuenta?<a HREF="otra_pagina.html"> Crear una cuenta</a></p>
   </div>
 
 
