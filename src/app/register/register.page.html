@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <figure class="ion-text-center">
+    <ion-avatar class="center-avatar"> <!-- crear clase css para centrar el avatar -->
+      <img src="../../assets/images/user.jpg" alt="logo" class="logo">
+    </ion-avatar>
+  </figure>
+  <form [formGroup]="registerForm" (ngSubmit)="register(registerForm.value)">
+    <ion-item>
+      <ion-input label="Email" labelPlacement="floating" placeholder="Email" formControlName="email"></ion-input>
+    </ion-item>  
+    <ion-item>
+      <ion-input label="Nombre" labelPlacement="floating" placeholder="Nommbre" formControlName="name"></ion-input>
+    </ion-item> 
+    <ion-item>
+      <ion-input label="Apellido" labelPlacement="floating" placeholder="Apellido" formControlName="last_name"></ion-input>
+    </ion-item> 
+    <!-- Colocar campos de password como tipo password -->
+    <ion-item>
+      <ion-input label="Contraseña" labelPlacement="floating" placeholder="Contraseña" formControlName="password"></ion-input>
+    </ion-item>  
+    <ion-item>
+      <ion-input label="Confirme Contraseña" labelPlacement="floating" placeholder="Confirme Contraseña" formControlName="confirmation_password"></ion-input>
+    </ion-item>   
+    <ion-button
+      expand="full"
+      shape="round"
+      color="success"
+      [disabled]="!registerForm.valid"
+      type="submit"
+    >
+      Registrarse
+    </ion-button>
+  </form>
+</ion-content>
