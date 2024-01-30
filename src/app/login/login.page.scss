@@ -29,13 +29,13 @@ p{
     text-align: center;
     
 }
-.form{
+form{
     margin-top: 15px;
     padding-left: 30px;
     padding-right: 30px;
     
 }
-.botones{
+ion-input{
     margin-top: 35px;
     height: 48px;
     font-size: 15px;
@@ -47,10 +47,9 @@ p{
     --highlight-color-focused:#a2b3d1;
 
 }
-.boton-login{
+ion-button{
     margin-top: 35px;
     --background: #fbae00;
-    
     font-size: bold;
     box-shadow: 1px 8px 8px 0px rgba(0,0,0,0.5);
 }
