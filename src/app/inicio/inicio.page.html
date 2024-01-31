@@ -1,31 +1,56 @@
-<ion-app>
+<ion-app class="inicio-app">
+
+    <!--Inicio de menú-->
     <ion-menu contentId="main-content">
         <ion-header>
             <ion-toolbar color="tertiary">
-                <img class="logo-menu ion-text-center" src="./assets/images/imagen_2024-01-23_204621634-removebg-preview.png">
+                <img class="ion-text-center" src="../../assets/images/BlinkSeats.png">
             </ion-toolbar>
         </ion-header>
         <ion-content class="ion-padding">Se colocaran categorias</ion-content>
     </ion-menu>
-    <div class="ion-page" id="main-content">
+
+    <!--Inicio de pagina-->
+
+    <ion-content id="main-content">
         <ion-header>
             <ion-toolbar>
                 <ion-buttons slot="start">
                     <ion-menu-button></ion-menu-button>
                 </ion-buttons>
-                <img class="logo" src="./assets/images/imagen_2024-01-23_204621634-removebg-preview.png">
+                <img class="logo" src="./assets/images/BlinkSeats.png">
             </ion-toolbar>
         </ion-header>
-        <ion-content>
-        <div>
-            <swiper-container [loop]="true" pagination="true" pagination-clickable="true" space-between="30"
-    autoplay-delay="2500" autoplay-disable-on-interaction="false" pagination-dynamic-bullets="true">
-                <swiper-slide *ngFor="let slide of slides; let i = index">
-                    <img src="{{slide.image}}">
-                </swiper-slide>
-            </swiper-container>
-        </div>
+        <ion-content >
+            <div class="inicio-app">
+                <swiper-container [loop]="true" pagination="true" pagination-clickable="true" space-between="30"
+                    autoplay-delay="2500" autoplay-disable-on-interaction="false" pagination-dynamic-bullets="true">
+                    <swiper-slide *ngFor="let slide of slides; let i = index">
+                        <img src="{{slide.image}}">
+                    </swiper-slide>
+                </swiper-container>
+                
+                    <h2>Destacados</h2>
+                    <hr>
+                    <div class="cards">
+                    <ion-card>
+                        <img alt="Silhouette of mountains" src="https://tuboleta.com/imagenes/65b3ba278c8e1.webp" />
+                        <ion-card-header>
+                          <ion-card-title>Partido Betplay</ion-card-title>
+                          <ion-card-subtitle>Club Deportivo Equidad vs Ind. Santa Fe 2024</ion-card-subtitle>
+                        </ion-card-header>
+                      
+                        <ion-card-content>
+                            <div class="container">
+                                <div class="box1">Martes <br><b>30</b><br>Ene 2024</div>
+                                <div class="box2"><ion-button shape="round">Comprar entrada.</ion-button></div>
+                              </div>
+                        </ion-card-content>
+                      </ion-card>
+                    </div>
+                
+            </div>
         </ion-content>
-    </div>
+    </ion-content>
 
 </ion-app>
