@@ -21,13 +21,23 @@
 
       <ion-input type="password" label="Password" placeholder="Password" labelPlacement="stacked"
         formControlName="password"></ion-input>
+
+        <div class="validation_messages">
+          <ng-container *ngFor="let validation of validation_messages.password"> 
+            <div *ngIf="
+          (loginForm.get('password')?.hasError(validation.type) &&
+          loginForm.get('password')?.dirty)" class="validation_messages">
+              {{validation.message}}</div>
+          </ng-container>
+        </div>
+
       <ion-button type="submit" [disabled]="!loginForm.valid" shape="round"
         expand="full">login</ion-button>
     </form>
     <div class="validation_mes">
       <b>{{loginMessage}}</b>
     </div>
-    <p>¿Aun no tienes cuenta?<a HREF="otra_pagina.html"> Crear una cuenta</a></p>
+    <p>¿Aun no tienes cuenta?<a HREF="./register"> Crear una cuenta</a></p>
   </div>
 
 

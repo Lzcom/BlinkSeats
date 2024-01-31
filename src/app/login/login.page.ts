@@ -26,7 +26,8 @@ validation_messages={
   constructor(private formBuilder:FormBuilder,
     private authService: AuthService,
     private router: Router,
-    private storage: Storage) {
+    private storage: Storage
+    ) {
     this.loginForm = this.formBuilder.group({
       email: new FormControl(
         "",
