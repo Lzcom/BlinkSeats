@@ -22,7 +22,8 @@
       "es2018", 
       "dom"
     ],
-    "useDefineForClassFields": false
+    "useDefineForClassFields": false,
+    "resolveJsonModule": true //Añadir esto para que funcione el Api
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

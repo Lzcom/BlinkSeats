@@ -1,15 +1,4 @@
 <ion-app class="inicio-app">
-
-    <!--Inicio de menú-->
-    <ion-menu contentId="main-content">
-        <ion-header>
-            <ion-toolbar color="tertiary">
-                <img class="ion-text-center" src="../../assets/images/BlinkSeats.png">
-            </ion-toolbar>
-        </ion-header>
-        <ion-content class="ion-padding">Se colocaran categorias</ion-content>
-    </ion-menu>
-
     <!--Inicio de pagina-->
 
     <ion-content id="main-content">
@@ -23,12 +12,20 @@
         </ion-header>
         <ion-content >
             <div class="inicio-app">
-                <swiper-container [loop]="true" pagination="true" pagination-clickable="true" space-between="30"
+                <!--<swiper-container [loop]="true" pagination="true" pagination-clickable="true" space-between="30"
                     autoplay-delay="2500" autoplay-disable-on-interaction="false" pagination-dynamic-bullets="true">
                     <swiper-slide *ngFor="let slide of slides; let i = index">
                         <img src="{{slide.image}}">
                     </swiper-slide>
+                </swiper-container>-->
+
+                <swiper-container [pagination]="true" [slidesPerPage]="2" [loop]="true" pagination-clickable="true" space-between="30"
+                autoplay-delay="2500" autoplay-disable-on-interaction="false" pagination-dynamic-bullets="true" >
+                    <swiper-slide *ngFor="let slide of event_list" >
+                        <img src="{{slide.image}}">
+                    </swiper-slide>
                 </swiper-container>
+                
                 
                     <h2>Destacados</h2>
                     <hr>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuController } from '@ionic/angular';
+import { EventsService } from '../services/events.service'; //Servicio de Api.
 
 
 @Component({
@@ -8,8 +9,8 @@ import { MenuController } from '@ionic/angular';
   styleUrls: ['./inicio.page.scss'],
 })
 export class InicioPage implements OnInit {
-
-  slides = [
+  event_list:any;
+  /*slides = [
     {
       image: "https://tuboleta.com/imagenes/65aaf0cd45f98.png", 
     },
@@ -25,12 +26,23 @@ export class InicioPage implements OnInit {
     {
       image: "https://tuboleta.com/imagenes/65afdd850b618.jpg"
     }
-  ]
+  ]*/
 
-  constructor(private menu:MenuController) { }
+  constructor(private menu:MenuController,
+    private events: EventsService) { }
 
   ngOnInit() {
 
   }
+  ionViewDidEnter(){
+    this.events.getEvents().then( 
+      res => {
+        this.event_list= res;
+        console.log("Eventos desde server",this.event_list)
+      }
+    )
+    console.log("localEvents",this.events.getLocalEvents().events);
+  }
+ 
 
 }

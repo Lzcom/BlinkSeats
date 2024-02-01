@@ -54,7 +54,7 @@ login(login_data: any){
   this.authService.loginUser(login_data).then(res => {
   this.loginMessage = res;
   this.storage.set('userLoggedIn',true);
-  this.router.navigateByUrl('/inicio');
+  this.router.navigateByUrl('/menu/inicio');
   }).catch(err => {
     this.loginMessage = err;
   })
