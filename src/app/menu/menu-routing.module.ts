@@ -18,6 +18,11 @@ const routes: Routes = [
         path: 'deportes',
         loadChildren:() => import('../deportes/deportes.module').then(m => m.DeportesPageModule)
        ,
+    },
+    {
+      path: 'conciertos',
+      loadChildren:() => import('../conciertos/conciertos.module').then(m => m.ConciertosPageModule)
+    
     }]
 
 

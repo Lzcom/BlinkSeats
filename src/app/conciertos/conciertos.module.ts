@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { ConciertosPageRoutingModule } from './conciertos-routing.module';
 
 import { ConciertosPage } from './conciertos.page';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 @NgModule({
   imports: [
@@ -15,6 +16,7 @@ import { ConciertosPage } from './conciertos.page';
     IonicModule,
     ConciertosPageRoutingModule
   ],
-  declarations: [ConciertosPage]
+  declarations: [ConciertosPage],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class ConciertosPageModule {}

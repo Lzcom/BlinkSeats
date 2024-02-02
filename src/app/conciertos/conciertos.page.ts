@@ -9,9 +9,6 @@ import { MenuController } from '@ionic/angular';
 export class ConciertosPage implements OnInit {
   slides = [
     {
-      image: "https://tuboleta.com/imagenes/65aaf0cd45f98.png", 
-    },
-    {
       image: "https://www.tuboleta.com/images/Eventos/Carnaval-de-barranquilla-2024/images/banner-coronacion.jpg",      
     },
     {
