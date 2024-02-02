@@ -7,18 +7,6 @@ const routes: Routes = [
     path: 'home',
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
-   
-  {
-    path: '',
-    redirectTo: 'menu/home',
-    pathMatch: 'full'
-  },
-  
-  {
-    path: '',
-    redirectTo: 'menu/deportes',
-    pathMatch: 'full'
-  },
   {
     path: 'inicio',
     loadChildren: () => import('./inicio/inicio.module').then( m => m.InicioPageModule),
@@ -47,6 +35,21 @@ const routes: Routes = [
   {
     path: 'teatro',
     loadChildren: () => import('./teatro/teatro.module').then( m => m.TeatroPageModule)
+  },
+  {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full'
+  },
+  {
+    path: '',
+    redirectTo: 'menu/conciertos',
+    pathMatch: 'full'
+  },
+  {
+    path: '',
+    redirectTo: 'menu/deportes',
+    pathMatch: 'full'
   },
 ];
 

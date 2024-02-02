@@ -12,6 +12,8 @@ import { Storage } from '@ionic/storage-angular';
 })
 export class LoginPage implements OnInit {
 loginForm: FormGroup;
+showPassword = false;
+
 validation_messages={
   email: [
     {type: "required", message: "Email es requerido"},
@@ -19,7 +21,7 @@ validation_messages={
   ],
   password: [
     {type: "required", message: "Contraseña es requerida"},
-    //{type: "pattern", message: "Contraseña no es valida"}
+    
   ]
 }
   loginMessage: any;
@@ -43,13 +45,14 @@ validation_messages={
         Validators.compose([
           Validators.required,
         ])
-      )
+      ),
+     
     })
-   }
+  }
 
   ngOnInit() {
   }
-login(login_data: any){
+login(login_data: any){ // validaciín de inicio de sesión.
   console.log(login_data);
   this.authService.loginUser(login_data).then(res => {
   this.loginMessage = res;
@@ -58,6 +61,9 @@ login(login_data: any){
   }).catch(err => {
     this.loginMessage = err;
   })
+}
+togglePasswordVisibility() {
+  this.showPassword = !this.showPassword;
 }
 
 }

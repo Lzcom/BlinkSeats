@@ -12,7 +12,7 @@ export class ConciertosPage implements OnInit {
       image: "https://www.tuboleta.com/images/Eventos/Carnaval-de-barranquilla-2024/images/banner-coronacion.jpg",      
     },
     {
-      image: "https://ticketlive.com.co/wp-content/uploads/2023/11/juanes-bogota.webp",
+      image: "https://movistararena.co/wp-content/uploads/2023/11/juanes-bogota-juanes-colombia.png",
     },
     {
       image: "https://tuboleta.com/imagenes/65a60b2500ae9.webp"
