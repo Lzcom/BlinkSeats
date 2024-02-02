@@ -11,21 +11,40 @@ ion-menu::part(backdrop) {
   
     box-shadow: 4px 0px 16px rgba(255, 0, 255, 0.18);
   }
+  ion-toolbar{
+    width: max-content;
+    --background: #572975;
+  }
 
   h2{
     font-size: 1.75em;
     background-color: #572975;
+    color: #d09306;
+    text-align: center;
+    
   }
+  .h22{
+    margin-top:30%;
+  }
+
+    hr {
+      
+      height: 5px !important;
+      width: 300px !important;
+      background: #815c97 !important;
+      display: block !important;
+      opacity: 20 !important;
+      visibility: visible !important;
+    }
+  
   
 .logo{
     width: 50%;
     height: 50%;
     align-items: center;
-}
-.logo-menu{
-  width: 50%;
-  height: 50%;
-  
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 50px;
 }
 swiper-slide img{
     display: flex;
@@ -46,8 +65,26 @@ ion-card img{
   height: 60%;
   
 }
+ion-card{
+  height: 347px;
+  margin: 10px;
+  background-color: #d09306;
+
+  color:#3d5f0a
+}ion-card-subtitle{
+  color: #3d5f0a;
+}
 .container {
   white-space: nowrap; /* Evita el espacio entre elementos */
+}
+ion-card-header{
+  padding:1px;
+  text-align: center;
+
+}
+ion-card-title{
+  font-size: initial;
+  color:#283e06;
 }
 
 .box1, .box2 {
@@ -56,9 +93,16 @@ ion-card img{
   box-sizing: border-box; /* Incluye padding y borde en el ancho */
   vertical-align: top;
   text-align: center; /* Alinea los elementos en la parte superior */
+
+}
+.boton-card{
+  margin-top: 10px;
+    margin-left: 1px 
 }
 
 .cards{
   margin-top: 15px;
   padding: 20px;
+  align-items: center;
+  justify-content: center;
 }

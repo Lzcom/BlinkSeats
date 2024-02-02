@@ -5,49 +5,137 @@
         <ion-header>
             <ion-toolbar>
                 <ion-buttons slot="start">
-                    <ion-menu-button></ion-menu-button>
+                    <ion-menu-button color="secondary"></ion-menu-button>
                 </ion-buttons>
                 <img class="logo" src="./assets/images/BlinkSeats.png">
             </ion-toolbar>
         </ion-header>
-        <ion-content >
+        <ion-content>
             <div class="inicio-app">
-                <!--<swiper-container [loop]="true" pagination="true" pagination-clickable="true" space-between="30"
+                <swiper-container [loop]="true" pagination="true" pagination-clickable="true" space-between="30"
                     autoplay-delay="2500" autoplay-disable-on-interaction="false" pagination-dynamic-bullets="true">
                     <swiper-slide *ngFor="let slide of slides; let i = index">
                         <img src="{{slide.image}}">
                     </swiper-slide>
-                </swiper-container>-->
+                </swiper-container>
 
-                <swiper-container [pagination]="true" [slidesPerPage]="2" [loop]="true" pagination-clickable="true" space-between="30"
+                <!--<swiper-container [pagination]="true" [slidesPerPage]="2" [loop]="true" pagination-clickable="true" space-between="30"
                 autoplay-delay="2500" autoplay-disable-on-interaction="false" pagination-dynamic-bullets="true" >
                     <swiper-slide *ngFor="let slide of event_list" >
                         <img src="{{slide.image}}">
                     </swiper-slide>
-                </swiper-container>
-                
-                
-                    <h2>Destacados</h2>
-                    <hr>
-                    <div class="cards">
+                </swiper-container>-->
+
+
+                <h2><strong>DESTACADOS</strong></h2>
+                <hr />
+                <div class="cards">
                     <ion-card>
-                        <img alt="Silhouette of mountains" src="https://tuboleta.com/imagenes/65b3ba278c8e1.webp" />
+                        <img src="https://tuboleta.com/imagenes/659eaf6ce18da.webp" />
                         <ion-card-header>
-                          <ion-card-title>Partido Betplay</ion-card-title>
-                          <ion-card-subtitle>Club Deportivo Equidad vs Ind. Santa Fe 2024</ion-card-subtitle>
+                            <ion-card-title><strong> DAVIS GRUPO MUNDIAL I : COLOMBIA VS
+                                    LUXEMBURGO</strong></ion-card-title>
+                            <ion-card-subtitle>Club Bellavista Colsubsidio</ion-card-subtitle>
                         </ion-card-header>
-                      
+
                         <ion-card-content>
                             <div class="container">
                                 <div class="box1">Martes <br><b>30</b><br>Ene 2024</div>
                                 <div class="box2"><ion-button shape="round">Comprar entrada.</ion-button></div>
-                              </div>
+                            </div>
                         </ion-card-content>
-                      </ion-card>
+                    </ion-card>
+
+                    <ion-card>
+                        <img src="https://tuboleta.com/imagenes/65981dad167a7.webp" />
+                        <ion-card-header>
+                            <ion-card-title><b>WENSES Y LALA</b></ion-card-title>
+                            <ion-card-subtitle>Teatro Cafam</ion-card-subtitle>
+                        </ion-card-header>
+
+                        <ion-card-content>
+                            <div class="container">
+                                <div class="box1">Viernes<br><strong>09</strong><br>Feb 2024</div>
+                                <div class="box2"><ion-button class="boton-card" shape="round">Comprar
+                                        entrada.</ion-button></div>
+                            </div>
+                        </ion-card-content>
+                    </ion-card>
+
+                    <ion-card>
+                        <img src="https://tuboleta.com/imagenes/65a5a79bbe918.webp" />
+                        <ion-card-header>
+                            <ion-card-title><b>LOS AMIGOS INVISIBLES</b></ion-card-title>
+                            <ion-card-subtitle>Teatro Pablo Tobón Uribe</ion-card-subtitle>
+                        </ion-card-header>
+
+                        <ion-card-content>
+                            <div class="container">
+                                <div class="box1">Jueves<br><strong>22</strong><br>Feb 2024</div>
+                                <div class="box2"><ion-button class="boton-card" shape="round">Comprar
+                                        entrada.</ion-button></div>
+                            </div>
+                        </ion-card-content>
+                    </ion-card>
+
+                    <ion-card>
+                        <img src="https://tuboleta.com/imagenes/65b81ace8dbdd.webp" />
+                        <ion-card-header>
+                            <ion-card-title><b>SILVESTRE DANDONG</b></ion-card-title>
+                            <ion-card-subtitle>Estadio El Campín</ion-card-subtitle>
+                        </ion-card-header>
+
+                        <ion-card-content>
+                            <div class="container">
+                                <div class="box1">Sabado<br><strong>18</strong><br>Mayo 2024</div>
+                                <div class="box2"><ion-button class="boton-card" shape="round">Comprar
+                                        entrada.</ion-button></div>
+                            </div>
+                        </ion-card-content>
+                    </ion-card>
+
+                    <h2 class="h22"><strong>LOS MÁS BUSCADOS</strong></h2>
+                    <hr />
+
+                    <ion-card>
+                        <img src="https://tuboleta.com/imagenes/65afe8154b074.webp" />
+                        <ion-card-header>
+                            <ion-card-title><b>BEATS-FEBRERO</b></ion-card-title>
+                            <ion-card-subtitle>Boom Stand- Up</ion-card-subtitle>
+                        </ion-card-header>
+
+                        <ion-card-content>
+                            <div class="container">
+                                <div class="box1">Viernes<br><strong>09</strong><br>Feb 2024</div>
+                                <div class="box2"><ion-button class="boton-card" shape="round">Comprar
+                                        entrada.</ion-button></div>
+                            </div>
+                        </ion-card-content>
+                    </ion-card>
+                    <ion-card>
+                        <img src="https://tuboleta.com/imagenes/65b3cee41a40d.png" />
+                        <ion-card-header>
+                            <ion-card-title><strong> DE LA LEYENDA VALLENATA</strong></ion-card-title>
+                            <ion-card-subtitle>Parque de la Leyenda</ion-card-subtitle>
+                        </ion-card-header>
+
+                        <ion-card-content>
+                            <div class="container">
+                                <div class="box1">Viernes<br><strong>03</strong><br>May 2024</div>
+                                <div class="box2"><ion-button class="boton-card" shape="round">Comprar
+                                        entrada.</ion-button></div>
+                            </div>
+                        </ion-card-content>
+                    </ion-card>
+                    <div>
+                        
                     </div>
-                
+                </div>
+
             </div>
+
         </ion-content>
+        
     </ion-content>
 
 </ion-app>

@@ -1,15 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuController } from '@ionic/angular';
-import { EventsService } from '../services/events.service'; //Servicio de Api.
-
 
 @Component({
-  selector: 'app-inicio',
-  templateUrl: './inicio.page.html',
-  styleUrls: ['./inicio.page.scss'],
+  selector: 'app-conciertos',
+  templateUrl: './conciertos.page.html',
+  styleUrls: ['./conciertos.page.scss'],
 })
-export class InicioPage implements OnInit {
-  
+export class ConciertosPage implements OnInit {
   slides = [
     {
       image: "https://tuboleta.com/imagenes/65aaf0cd45f98.png", 
@@ -30,12 +27,9 @@ export class InicioPage implements OnInit {
       image:"https://tuboleta.com/imagenes/65b3c92d7a177.webp"
     }
   ]
-
-  constructor(private menu:MenuController,
-    private events: EventsService) { }
+  constructor() { }
 
   ngOnInit() {
-
   }
 
 }

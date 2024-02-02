@@ -1,0 +1,63 @@
+<ion-content id="main-content">
+  <ion-header>
+      <ion-toolbar>
+          <ion-buttons slot="start">
+              <ion-menu-button color="secondary"></ion-menu-button>
+          </ion-buttons>
+          <img class="logo" src="./assets/images/BlinkSeats.png">
+      </ion-toolbar>
+  </ion-header>
+  <ion-content >
+      <div class="inicio-app">
+          <!--<swiper-container [loop]="true" pagination="true" pagination-clickable="true" space-between="30"
+              autoplay-delay="2500" autoplay-disable-on-interaction="false" pagination-dynamic-bullets="true">
+              <swiper-slide *ngFor="let slide of slides; let i = index">
+                  <img src="{{slide.image}}">
+              </swiper-slide>
+          </swiper-container>-->
+
+          <swiper-container [pagination]="true" [slidesPerPage]="2" [loop]="true" pagination-clickable="true" space-between="30"
+          autoplay-delay="2500" autoplay-disable-on-interaction="false" pagination-dynamic-bullets="true" >
+              <swiper-slide *ngFor="let slide of event_list" >
+                  <img src="{{slide.image}}">
+              </swiper-slide>
+          </swiper-container>
+
+          <h2><strong>DEPORTES</strong></h2>
+                    <hr/>
+
+              <div class="cards">
+              <ion-card>
+                  <img  src="https://tuboleta.com/imagenes/659eaf6ce18da.webp" />
+                  <ion-card-header>
+                    <ion-card-title><strong> DAVIS GRUPO MUNDIAL I : COLOMBIA VS LUXEMBURGO</strong></ion-card-title>
+                    <ion-card-subtitle>Club Bellavista Colsubsidio</ion-card-subtitle>
+                  </ion-card-header>
+                
+                  <ion-card-content>
+                      <div class="container">
+                          <div class="box1">Martes <br><b>30</b><br>Ene 2024</div>
+                          <div class="box2"><ion-button shape="round">Comprar entrada.</ion-button></div>
+                        </div>
+                  </ion-card-content>
+                </ion-card>
+
+                <ion-card>
+                  <img src="https://tuboleta.com/imagenes/65b3ba278c8e1.webp" />
+                  <ion-card-header>
+                    <ion-card-title><b>Partido Betplay</b></ion-card-title>
+                    <ion-card-subtitle>Club Deportivo Equidad vs Ind. Santa Fe 2024</ion-card-subtitle>
+                  </ion-card-header>
+                
+                  <ion-card-content>
+                      <div class="container">
+                          <div class="box1">Martes <br><b>30</b><br>Ene 2024</div>
+                          <div class="box2"><ion-button class="boton-card" shape="round">Comprar entrada.</ion-button></div>
+                        </div>
+                  </ion-card-content>
+                </ion-card>
+              </div>
+          
+      </div>
+  </ion-content>
+</ion-content>
